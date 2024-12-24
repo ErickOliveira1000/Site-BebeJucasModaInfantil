@@ -1,0 +1,268 @@
+/* Estilos gerais */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+a {
+    color: blue;
+    text-decoration: none;
+}
+a:hover{color: rgb(169, 72, 196);
+    text-decoration: none;
+}
+
+.container {
+    background-color: white;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position:fixed;
+
+}
+
+/* Estilos do cabeçalho */
+
+header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0.3px;
+}
+
+.logo {
+    float: left;
+}
+
+.logo img {
+    height: 70px; /* Ajuste conforme o tamanho logo */
+    margin-left: 30px;
+}
+
+nav {
+    float: left;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 20;
+    padding: 10;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.social {
+    display: flex;
+    margin-right: 20px;
+    padding: 10px;
+    justify-content: right;
+}
+
+.social a {
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.social img {
+    height: 30px; /* Ajuste conforme o tamanho dos ícones das redes sociais */
+}
+
+/* Estilos do banner */
+
+.banner {
+    background-image: url('banner.jpg'); /* Substitua pela imagem do seu banner */
+    background-size: cover;
+    color: #0f0a0a;
+    text-align: center;
+    padding: 100px 0;
+    background-color:  #e4c9e2;
+    margin: 90px;
+    border-radius: 1%;
+}
+
+.banner h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    
+}
+
+.banner p {
+    font-size: 1.5em;
+    
+}
+
+
+.novo-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    background-color: white;
+    
+}
+
+.faca-mais-texto{
+    width: 60%;
+    padding: 0 40px;
+}
+.faca-mais-texto h3{
+    font-size: 50px;
+}
+.faca-mais-texto p{
+    margin: 5px 0 10px 0;
+    padding: 0 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Estilização do carrossel */
+
+.slides{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+
+}
+
+.carrossel{
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+}
+
+.containerdoSlide{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+.containerdoSlide img{
+    object-fit: cover;
+    height: 760px;
+    width: 500px;
+}
+
+/*fim da estilização do carrossel */
+
+.faca-mais-imagem img{
+    width: 100%;
+}
+
+
+.faca-mais-imagem img{
+    height: 300px;
+    width: 300x;
+}
+
+.btn{
+    background-color: aqua;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+.btn2{
+    background-color: aqua;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+
+}
+
+.novo-container2{
+    display: flex;
+    text-align: center;
+}
+
+
+.fotos2{
+    display: flex;
+     
+}
+.fotos2 img {
+    flex: 1;
+    margin: 2px;
+    height: 350px;
+    width: 350px;
+    
+}
+
+
+
+.sobre-bebejucas h2{
+    font-size: 50px;
+    color: black;
+    margin: 18px 0;
+    padding: 10px ;
+
+}
+.sobre-bebejucas p{
+    font-size: 18px;
+    color: black;
+    margin: 18px 0;
+    padding: 10px ;
+ 
+}
+.contato h2, h3 {
+    font-size: 30px;
+    color: black;
+    margin: 18px 0;
+    padding: 10px ;
+}
+.contato p{
+    font-size: 18px;
+    color: black;
+    margin: 18px 0;
+    padding: 10px ; 
+    
+}
+
+
+
+/* Estilos do rodapé */
+
+footer {
+    background-color: #76e5d8;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    position: none;
+    bottom: 0;
+    width: auto;
+}
+
+.container-footer {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.Voltar-ao-inicio{
+    margin: 10px 0 10px 0;
+    padding: 0 10px;
+    font-size: 15px;
+    text-align: center;
+    
+}
+
