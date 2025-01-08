@@ -51,7 +51,7 @@ const phoneMask = (value) => {
     return value
 }
 
-// Ocultar senha
+// Ocultar senha do input de cadastro
 
 document.addEventListener('DOMContentLoaded', () => {
     icone.classList.add('esconder')
