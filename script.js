@@ -15,7 +15,6 @@ function carrossel(){
     imgs.style.transform = `translateX(${-idx * 100}%)`;
 }
 
-
 setInterval(carrossel, 1800);
 
 //Cadastro de usuário
