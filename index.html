@@ -18,19 +18,46 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="produto.html">Produtos</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html" class="btn">Contato</a></li>
+                    <li><a href="index.html" class="btn-menu" id="menu-inicio">Início</a></li>
+                    <li><a href="produto.html" class="btn-menu" id="menu-produto">Produtos</a></li>
+                    <li><a href="sobre.html" class="btn-menu" id="menu-sobre">Sobre</a></li>
+                    <li><a href="contato.html"  class="btn-menu" id="menu-contato">Contato</a></li>
+                    <li><button class="cadastro btn" id="cadastrarUsuario">Cadastrar</button></li>
+                    <li class="social"><a href="https://api.whatsapp.com/send/?phone=5531998495847&text&type=phone_number&app_absent=0" target="_blank"><img src="img/whatsapp.png" alt="WhatsApp"></a></li>
+                    <li class="social"><a href="https://www.instagram.com/bebejucas/?img_index=1" target="_blank"><img src="img/instagram.png" alt="Instagram"></a></li>
                 </ul>
+                
             </nav>
-            <div class="social">
-                <a href="https://api.whatsapp.com/send/?phone=5531998495847&text&type=phone_number&app_absent=0" target="_blank"><img src="img/whatsapp.png" alt="WhatsApp"></a>
-                <a href="https://www.instagram.com/bebejucas/?img_index=1" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
-            </div>
+            
         </div>
     </header>
     <!--Navegação-->
+
+    <!--Popup-cadastro de cadastro do usuário-->
+
+    <div class="popup-cadastro" id="popup-cadastro">
+        <div class="dadosDoUsuario">
+            <strong>Cadastre-se</strong>
+            <div class="nomeDeCadastroUsuario">
+                <input id="nomeDeCadastroUsuario" type="text" class="nomeDeUsuario" placeholder="Nome de usuário">
+            </div>
+            <div class="telefoneDeCadastroUsuario">
+                <input id="telefoneDeCadastroUsuario" type="tel" maxlength="15" class="nomeDeUsuario" placeholder="(99) 9999-9999" onkeyup="handlePhone(event)">
+            </div>
+            <div class="emailDeCadastroUsuario">
+                <input id="emailDeCadastroUsuario" type="email" class="nomeDeUsuario" placeholder="Email de usuário">
+            </div>
+            <div class="senhaDeCadastroUsuario">
+                <input type="password" id="senhaDeCadastroUsuario" placeholder="Senha de usuário">
+                <span id="icone" onclick="mostrarEsconder()"></span>
+            </div>
+            
+            <button class="salvarUsuario" id="salvarUsuario">Salvar</button>
+            <button class="sair" id="sairDoCadastro">Sair</button>
+        </div>
+    </div>
+    <!--Fim do Popup-cadastro de cadastro do usuário-->
+
 
     <section class="banner">
         <h1>Bem-vindo à Bebejucas </h1>
@@ -48,6 +75,7 @@
                 <a href="produto.html" class="btn2">Confira nossos produtos</a>
             </div>
             
+            <!-- Carrossel de fotos -->
             <div class="slides">
                 <div class="carrossel">
                     <div class="containerdoSlide" id="img">
@@ -61,24 +89,17 @@
                         <img src="img/8.jpeg" alt="8">
                         <img src="img/9.jpeg" alt="9">
                         <img src="img/13.jpeg" alt="10">
-                       
                     </div>
                 </div>
-            
             </div>
+            <!-- Carrossel de fotos -->
         </div>
     <section>
 
-    <section>
+    <section id="produto-fotos">
         
         <h3>Tamanhos do 1-14</h3> 
         
-        <div class="fotos2">
-            <img src="img/1.jpeg" alt="1">
-            <img src="img/2.jpeg" alt="2">
-            <img src="img/3.jpeg" alt="3">
-            <img src="img/4.jpeg" alt="4">
-        </div>
         <div class="fotos2">
             <img src="img/1.jpeg" alt="1">
             <img src="img/2.jpeg" alt="2">
@@ -110,7 +131,7 @@
 
 
 
-    <!--teste 1-->
+    <!--Direcionamento para contato e agendamento-->
     <section>
         <div class="novo-container2">
             <div class="faca-mais-texto">
@@ -125,7 +146,7 @@
             </div>
         </div>
     </section>
-    <!--fim teste2-->
+    <!-- Fim Direcionamento para contato e agendamento-->
 
     <!--Início footer-->
     <footer>
@@ -135,5 +156,14 @@
         <div class="Voltar-ao-inicio"><a href="index.html">Voltar ao Início</a></div>
     </footer>
     <!--Fim footer-->
+    <script>
+        const menuInicio = document.getElementById('menu-inicio')
+
+        var idPagina = window.location.href
+
+        if(idPagina = 'http://127.0.0.1:5501/index.html') {
+            menuInicio.classList.add('selecionado')
+        }
+    </script>
 </body>
 </html>
