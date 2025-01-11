@@ -344,6 +344,12 @@ div.dadosDoUsuario input{
     padding-left: 15px;
 }
 
+div.dadosDoUsuario input:focus {
+    border: 2px solid;
+    border-color:  #2eddc6;
+    outline-style: none;
+}
+
 div.dadosDoUsuario button{
     background: #23A0FF;
     padding: 10px 50px;
@@ -929,14 +935,16 @@ div.dadosDoUsuario strong{
 
     #produto-fotos {
         justify-content: center;
+        align-items: center;
         margin-left: 5%;
-        margin-right: 5%;   
-        padding: 3%;
-        display: inline-flexbox;
+        margin-right: 5%;       
+        padding: 3%;  
     }
 
     .fotos2 {
-        display: inline;
+        display: flex;
+        flex-direction: column;  
+        align-items: center;
     }
     
     .novo-container2{
