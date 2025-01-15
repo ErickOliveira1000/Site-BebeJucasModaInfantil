@@ -34,7 +34,7 @@
     </header>
     <!--Navegação-->
 
-    <!--Popup-cadastro de cadastro do usuário-->
+    <!--Popup de cadastro do usuário-->
 
     <div class="popup-cadastro" id="popup-cadastro">
         <div class="dadosDoUsuario">
@@ -43,10 +43,10 @@
                 <input id="nomeDeCadastroUsuario" type="text" class="nomeDeUsuario" placeholder="Nome de usuário">
             </div>
             <div class="telefoneDeCadastroUsuario">
-                <input id="telefoneDeCadastroUsuario" type="tel" maxlength="15" class="nomeDeUsuario" placeholder="(99) 9999-9999" onkeyup="handlePhone(event)">
+                <input id="telefoneDeCadastroUsuario" type="tel" maxlength="15" class="telefoneDeUsuario" placeholder="(99) 9999-9999" onkeyup="handlePhone(event)">
             </div>
             <div class="emailDeCadastroUsuario">
-                <input id="emailDeCadastroUsuario" type="email" class="nomeDeUsuario" placeholder="Email de usuário">
+                <input id="emailDeCadastroUsuario" type="email" class="emailDeUsuario" placeholder="Email de usuário">
             </div>
             <div class="senhaDeCadastroUsuario">
                 <input type="password" id="senhaDeCadastroUsuario" placeholder="Senha de usuário">
@@ -57,11 +57,16 @@
             <button class="sair" id="sairDoCadastro">Sair</button>
         </div>
     </div>
-    <!--Fim do Popup-cadastro de cadastro do usuário-->
+    <!--Fim do Popup de cadastro do usuário-->
 
+    <!--Popup de Dados do usuário-->
     <div class="popup-dadosUsuario" id="popup-dadosUsuario">
         <div class="dadosDoUsuario1">
             <strong>Meus Dados</strong>
+            <img class="fotoDoUsuario" id="fotoDoUsuario" src="img/usuario.png">
+            
+          
+            
             <div class="nomeDeCadastroUsuario1">
                 <p id="nomeDeCadastroUsuario" >Nome do usuario</p>
             </div>
@@ -72,11 +77,36 @@
                 <p id="emailDeCadastroUsuario" >email.do.usuario.com</p>
             </div>
         
-            <button class="editarUsuario" id="editarUsuario">Editar</button>
+            <button class="editarDadosUsuario" id="editarDadosUsuario">Editar</button>
             <button class="sairPopupDadosUsuario" id="sairPopupDadosUsuario">Sair</button>
         </div>
     </div>
+    <!--Fim do Popup de dados do usuário-->
 
+    <!--Popup para editar dados do usuário-->
+    <div class="popup-editarDados" id="popup-editarDados">
+        <div class="dadosDoUsuario2">
+            <strong>Editar Dados</strong>
+            <div id="editarDadosImg">
+                <label class="editarImg" for="editarImg__input" tabindex="0"> 
+                    <span class="editarImg__imagem"></span>
+                </label>
+                <input type="file" accept="image/*" id="editarImg__input"/>
+            </div>
+            <div class="editarDadosUsuario">
+                <input id="nomeDeUsuario" type="text" class="nomeDeUsuario" placeholder="Nome de usuário">
+            </div>
+            <div class="editarDadosUsuario">
+                <input id="telefoneDeUsuario" type="tel" maxlength="15" class="telefoneDeUsuario" placeholder="(99) 9999-9999" onkeyup="handlePhone(event)">
+            </div>
+            <div class="editarDadosUsuario">
+                <p id="emailDeUsuario" >email.do.usuario.com</p>
+            </div>
+            <button class="salvarDadosUsuario" id="salvarDadosUsuario">Salvar</button>
+            <button class="voltarDeEditar" id="voltarDeEditar">Voltar</button>
+        </div>
+    </div>
+    <!--Fim do Popup de editar dados do usuário-->
 
     <section class="banner">
         <h1>Bem-vindo à Bebejucas </h1>

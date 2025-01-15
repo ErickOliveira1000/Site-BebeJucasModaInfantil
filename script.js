@@ -71,11 +71,48 @@ function mostrarEsconder(){
     }
 }
 
+
+// Script para carregar foto do Usuário
+
+const inputFile = document.querySelector('#editarImg__input');
+const pictureImage = document.querySelector('.editarImg__imagem');
+const pictureImageTxt = 'Escolha uma imagem';
+var imgAtual = 'img/usuario.png';
+
+inputFile.addEventListener('change', function(e) {
+    const inputTarget = e.target;
+    const file = inputTarget.files[0];
+    
+    if (file) {
+        const reader = new FileReader();
+        reader.addEventListener('load', function(e) {
+            const readerTarget = e.target;
+            const img = document.createElement('img');
+            img.src = readerTarget.result;
+            img.classList.add('editarImg__img');
+
+            pictureImage.innerHTML = '';
+
+            pictureImage.appendChild(img);
+
+        });
+
+        reader.readAsDataURL(file);
+    } else {
+        const img1 = document.createElement('img');
+        img1.classList.add('editarImg__img');
+        img1.src = imgAtual;
+        pictureImage.innerHTML = '';
+        pictureImage.appendChild(img1);
+    }
+    
+});
+
 // Script do popup de Dados de Usuario
 
 const botaoMostrarDadosUsuario = document.getElementById('mostrarDadosUsuario');
 const botaoSairPopupDadosUsuario = document.getElementById('sairPopupDadosUsuario');
-const botaoEditarUsuario = document.getElementById('editarUsuario');
+const botaoEditarUsuario = document.getElementById('editarDadosUsuario');
 const popupDadosUsuario = document.getElementById('popup-dadosUsuario');
 
 botaoMostrarDadosUsuario.addEventListener("click", () => (
@@ -88,4 +125,27 @@ botaoSairPopupDadosUsuario.addEventListener("click", () => (
  
 botaoEditarUsuario.addEventListener('click', () => {
     popupDadosUsuario.classList.remove("ativo1")
+    popupEditarDados.classList.add("ativo2")
+    const img1 = document.createElement('img');
+    img1.classList.add('editarImg__img');
+    img1.src = imgAtual;
+    pictureImage.innerHTML = '';
+    pictureImage.appendChild(img1);
+});
+
+
+// Script do Popup Editar dados de usuário
+
+
+const botaovoltarDeEditar = document.getElementById('voltarDeEditar');
+const botaoSalvarDadosUsuario = document.getElementById('salvarDadosUsuario');
+const popupEditarDados = document.getElementById('popup-editarDados');
+
+botaovoltarDeEditar.addEventListener("click", () => (
+    popupEditarDados.classList.remove("ativo2")
+    (popupDadosUsuario.classList.add("ativo1"))
+));
+ 
+botaoSalvarDadosUsuario.addEventListener('click', () => {
+    popupEditarDados.classList.remove("ativo2")
 });

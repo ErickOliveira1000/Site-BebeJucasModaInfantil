@@ -41,7 +41,7 @@ const popupCadastroProduto = document.getElementById('popupCadastroProduto');
 var imgProduto = document.getElementById('produtosImg');
 var imgAtual = imgProduto.getAttribute('src');
 
-// Abri o popup de cadastro de produto pegando os dados do produto existente
+// Abrir o popup de cadastro de produto pegando os dados do produto existente
 botaoEditarProduto.addEventListener('click', () => {      
     popupCadastroProduto.classList.add('ativo');          
     const img1 = document.createElement('img');
