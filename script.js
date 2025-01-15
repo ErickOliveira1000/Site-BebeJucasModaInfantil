@@ -17,7 +17,7 @@ function carrossel(){
 
 setInterval(carrossel, 1800);
 
-//Cadastro de usuário
+//Script do Popup do Cadastro de usuário
 
 const botaoCadastrarUsuario = document.getElementById('cadastrarUsuario');
 const botaoSair = document.getElementById('sairDoCadastro');
@@ -71,5 +71,21 @@ function mostrarEsconder(){
     }
 }
 
+// Script do popup de Dados de Usuario
 
+const botaoMostrarDadosUsuario = document.getElementById('mostrarDadosUsuario');
+const botaoSairPopupDadosUsuario = document.getElementById('sairPopupDadosUsuario');
+const botaoEditarUsuario = document.getElementById('editarUsuario');
+const popupDadosUsuario = document.getElementById('popup-dadosUsuario');
 
+botaoMostrarDadosUsuario.addEventListener("click", () => (
+    popupDadosUsuario.classList.add("ativo1")
+));
+
+botaoSairPopupDadosUsuario.addEventListener("click", () => (
+    popupDadosUsuario.classList.remove("ativo1")
+));
+ 
+botaoEditarUsuario.addEventListener('click', () => {
+    popupDadosUsuario.classList.remove("ativo1")
+});

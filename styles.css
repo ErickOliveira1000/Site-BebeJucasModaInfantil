@@ -32,6 +32,15 @@ header {
     padding: 0.3px;
 }
 
+.logo-usuario {   /* estilização da foto do usuário - botão de acesso aos dados de usuário */
+    width: 30px;
+    position: relative;
+    float: left;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
 .logo {
     float: left;
 }
@@ -345,7 +354,7 @@ div.dadosDoUsuario input{
 }
 
 div.dadosDoUsuario input:focus {
-    border: 2px solid;
+    border: 2px solidc;
     border-color:  #2eddc6;
     outline-style: none;
 }
@@ -369,7 +378,6 @@ div.dadosDoUsuario button{
 
 .popup-cadastro.ativo{
     display: flex;
-
 }
 
 #sairDoCadastro {
@@ -411,6 +419,82 @@ div.dadosDoUsuario strong{
     background: url('./img/esconder.png');
     background-size: cover;
 }
+
+/* Fim da estilização do popup de Cadastro de Usuário */
+
+/* Estilização do popup de Dados do Usuário */
+
+div.dadosDoUsuario1{
+    position: fixed;
+    width: 300px;
+    height: 400px;
+    margin: 20px 40%;
+    display: flex;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.493);  
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #fbf7fc;
+    border-radius: 10px; 
+    z-index: 3;
+}
+
+div.dadosDoUsuario1 p{
+    width: 230px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: none;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(17, 17, 17);
+    font-size: 17px;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+div.dadosDoUsuario1 button{
+    background: #23A0FF;
+    padding: 10px 50px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    border-radius: 10px;
+    transition: background 0.2s; 
+}
+
+.popup-dadosUsuario{
+    display: none;
+}
+
+.popup-dadosUsuario.ativo1{
+    display: flex;
+}
+
+#sairPopupDadosUsuario {
+    margin-top: 10px;
+    background: #df5c28;
+}
+
+#sairPopupDadosUsuario:hover {
+    background: #eb5317;
+}
+
+div.dadosDoUsuario1 button:hover{
+    background: #1d85d4;
+}
+
+div.dadosDoUsuario1 strong{
+    color: #5ca815c5;
+    margin-bottom: 20px;
+    font-size: 20px;
+} 
+
+/* Fim da estilização do popup de Dados do Usuário */
 
 /* Estilização da pagina de produtos */
 
@@ -960,6 +1044,10 @@ div.dadosDoUsuario strong{
     div.dadosDoUsuario {
         margin: 0 35%;
     }
+
+    div.dadosDoUsuario1 {
+        margin: 0 35%;
+    }
 }   
 
 
@@ -1001,6 +1089,10 @@ div.dadosDoUsuario strong{
     }
 
     div.dadosDoUsuario {
+        margin: 85px 15%;
+    }
+
+    div.dadosDoUsuario1 {
         margin: 85px 15%;
     }
 
