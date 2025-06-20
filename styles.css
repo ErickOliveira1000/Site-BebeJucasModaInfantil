@@ -904,17 +904,17 @@ div.dadosDoUsuario2 strong{
 
 }
 
-/* Estilização do popup de cadastro de Produtos*/
+/* Estilização do popup de Produtos*/
 
-.popupCadastroProduto.ativo {
+.popupProduto.ativo {
     display: block;
 }
 
-.popupCadastroProduto {
+.popupProduto {
     display: none;
 }
 
-.cardCadastroPopup {
+.cardProdutoPopup {
     position: fixed;
     top: 80px;
     right: 30%;
@@ -927,14 +927,14 @@ div.dadosDoUsuario2 strong{
     z-index: 3;
 }
 
-#cadastroPopupImg {
+#produtoPopupImg {
     width: 100%;
     height: 65%;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
 
-.cadastroProdutoPopup {
+.produtoPopup {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1062,7 +1062,7 @@ div.dadosDoUsuario2 strong{
     background-color: #f03333;
 }
 
-/* Estilização do input de imagens do pupup de cadastro de Produtos*/
+/* Estilização do input de imagens do pupup de Produtos*/
 
 #picture__input {
     display: none;
@@ -1110,9 +1110,9 @@ div.dadosDoUsuario2 strong{
     border-top-right-radius: 12px;
 }
 
-/* Fim da estilização do input de imagens do pupup de cadastro de Produtos*/
+/* Fim da estilização do input de imagens do pupup de Produtos*/
 
-/* Fim da estilização do popup de cadastro de Produtos*/
+/* Fim da estilização do popup de Produtos*/
 
 /* Fim da estilização da pagina de Cadastro de produtos */
 
@@ -1230,6 +1230,12 @@ div.dadosDoUsuario2 strong{
         margin-left: 1px;
     }
 
+    .social {
+        position: relative;
+        float: right;
+        margin-right: 2px;
+    }
+
     .cadastro {
         position: fixed;
         top: 10px;
@@ -1238,6 +1244,8 @@ div.dadosDoUsuario2 strong{
 
     .btn {
         margin-top: 8px;
+        width: 100px;
+        padding: 5px;
     }
 
     #cadastrarNovoProduto {
@@ -1275,7 +1283,7 @@ div.dadosDoUsuario2 strong{
         width: 380px;
     }
 
-    .cardCadastroPopup {
+    .cardProdutoPopup {
         right: 30px;
     }
 }

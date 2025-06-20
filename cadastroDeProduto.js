@@ -37,7 +37,7 @@ const botaoSalvarProduto = document.getElementById('botaoSalvarProduto');
 const botaoExcluirProduto = document.getElementById('botaoExcluirProduto');
 const botaoFecharProduto = document.getElementById('botaoFecharProduto');
 const botaoCadastrarProduto = document.getElementById('cadastrarNovoProduto');
-const popupCadastroProduto = document.getElementById('popupCadastroProduto');
+const popupCadastroProduto = document.getElementById('popupProduto');
 var imgProduto = document.getElementById('produtosImg');
 var imgAtual = imgProduto.getAttribute('src');
 
