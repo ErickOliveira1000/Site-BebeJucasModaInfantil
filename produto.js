@@ -30,29 +30,26 @@ inputFile.addEventListener('change', function(e) {
     
 });
 
-// Script para abrir popup de Cadastro e edição de Produto
 
-const botaoEditarProduto = document.getElementById('botaoEditar');
-const botaoSalvarProduto = document.getElementById('botaoSalvarProduto');
-const botaoExcluirProduto = document.getElementById('botaoExcluirProduto');
-const botaoFecharProduto = document.getElementById('botaoFecharProduto');
-const botaoCadastrarProduto = document.getElementById('cadastrarNovoProduto');
-const popupCadastroProduto = document.getElementById('popupProduto');
-var imgProduto = document.getElementById('produtosImg');
+const botaoExibirProduto = document.getElementById('botaoExibirProduto');
+const botaoAdicionarProduto = document.getElementById('botaoAdicionarProduto');
+const botaoFechar = document.getElementById('botaoFechar');
+const popupExibirProduto = document.getElementById('popupExibirProduto');
+var imgProduto = document.getElementById('produtoImg');
 var imgAtual = imgProduto.getAttribute('src');
 
 // Abrir o popup de cadastro de produto pegando os dados do produto existente
-botaoEditarProduto.addEventListener('click', () => {      
-    popupCadastroProduto.classList.add('ativo');          
+botaoExibirProduto.addEventListener('click', () => {      
+    popupExibirProduto.classList.add('ativo');          
     const img1 = document.createElement('img');
     img1.classList.add('picture__img');
     img1.src = imgAtual;
     pictureImage.innerHTML = '';
     pictureImage.appendChild(img1);
 
-    const tituloAtualProduto = document.getElementById('tituloDoProduto').innerHTML;
-    const descricaoAtualProduto = document.getElementById('descricaoDoProduto').innerText;
-    const precoAtualProduto = document.getElementById('precoDoProduto').innerText;
+    const tituloAtualProduto = document.getElementById('produtoTitulo').innerHTML;
+    const descricaoAtualProduto = document.getElementById('produtoDescricao').innerText;
+    const precoAtualProduto = document.getElementById('produtoPreco').innerText;
 
     const inputTituloProduto = document.getElementById('tituloProduto');
     inputTituloProduto.value = tituloAtualProduto;
@@ -63,20 +60,11 @@ botaoEditarProduto.addEventListener('click', () => {
     const inputPrecoProduto = document.getElementById('precoProduto');
     inputPrecoProduto.value = precoAtualProduto;
 });
-
-botaoCadastrarProduto.addEventListener('click', () => {
-    popupCadastroProduto.classList.add('ativo')
-});
  
-botaoSalvarProduto.addEventListener('click', () => {
-    popupCadastroProduto.classList.remove("ativo")
+botaoAdicionarProduto.addEventListener('click', () => {
+    popupExibirProduto.classList.remove("ativo")
 });
 
-botaoExcluirProduto.addEventListener('click', () => (
-    popupCadastroProduto.classList.remove('ativo')
+botaoFechar.addEventListener('click', () => (
+    popupExibirProduto.classList.remove('ativo')
 ));
-
-botaoFecharProduto.addEventListener('click', () => (
-    popupCadastroProduto.classList.remove('ativo')
-));
-

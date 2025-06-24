@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nossos Produtos</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="produto.js" defer ></script>
 </head>
 
 <body>
@@ -22,6 +23,9 @@
                     <li><a href="sobre.html" class="btn-menu" id="menu-sobre">Sobre</a></li>
                     <li><a href="contato.html" class="btn-menu" id="menu-contato">Contato</a></li>
                     <li><button  id="cadastrarProduto"><a class="cadastro btn" href="cadastroDeProduto.html">Cadastrar Produto</a></button></li> 
+                </ul>
+
+                <ul class="icones">
                     <li class="social"><a href="https://api.whatsapp.com/send/?phone=5531998495847&text&type=phone_number&app_absent=0" target="_blank"><img src="img/whatsapp.png" alt="WhatsApp"></a></li>
                     <li class="social"><a href="https://www.instagram.com/bebejucas/?img_index=1" target="_blank"><img src="img/instagram.png" alt="Instagram"></a></li>
                 </ul>
@@ -29,7 +33,7 @@
         </div>
     </header>
     <!--Fim Navegação-->
-    <section class="bannerProdutos">
+    <section class="banner">
         <h1>Nossos Produtos</h1>
         <p>Confira nossa seleção de produtos para deixar os Bebejucas e Bebejucas estilosos
              e com lookinhos bem confortáveis. Venha e agende já seu horário.</p>
@@ -39,13 +43,38 @@
     <!--Galeria de produtos-->
 
     <section id="produtos">
+
+        <!--Popup de produto-->
+
+        <div class="popupExibirProduto" id="popupExibirProduto">
+            <div class="cardProdutoPopup">
+                <div id="produtoPopupImg">
+                    <label class="picture" for="picture__input" tabindex="0"> 
+                        <span class="picture__image"></span>
+                    </label>
+                
+                    <input type="file" accept="image/*" id="picture__input"/>
+                </div>
+                <div class="produtoPopup">
+                    <input placeholder="Título do Produto" maxlength="45" id="tituloProduto">
+                    <textarea placeholder="Descrição do Produto" maxlength="70" id="descricaoProduto"></textarea>
+                    <input placeholder="Preço" id="precoProduto">
+                </div>
+                <div class="seletoresPopup">
+                    <button id="botaoAdicionarProduto">ADICIONAR</button>
+                    <button id="botaoFechar"><img src="img/fechar.png"></button>    
+                </div>    
+            </div>
+        </div>
+        <!--Fim do Popup de produto-->
+
         <div class="card">
-            <img src="img/1.jpeg">
+            <img id="produtoImg" src="img/1.jpeg">
             <div>
-                <h1>Título do produto</h1>
-                <h2>Descrição detalhada do produto ocupando espaço maior</h2>
-                <span>R$ 5,90</span>
-                <button>Clique aqui</button>
+                <h1 id="produtoTitulo">Título do produto</h1>
+                <h2 id="produtoDescricao">Descrição detalhada do produto ocupando espaço maior</h2>
+                <span id="produtoPreco">R$ 5,90</span>
+                <button id="botaoExibirProduto">Clique aqui</button>
             </div>           
         </div>
 
