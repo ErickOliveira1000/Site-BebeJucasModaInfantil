@@ -1,34 +1,7 @@
 // Script para carregar foto do produto ao cadastrar e/ou editar
 
-const inputFile = document.querySelector('#picture__input');
+const inputFile = document.querySelector('#imgProduto');
 const pictureImage = document.querySelector('.picture__image');
-const pictureImageTxt = 'Escolha uma imagem';
-pictureImage.innerHTML = pictureImageTxt;
-
-inputFile.addEventListener('change', function(e) {
-    const inputTarget = e.target;
-    const file = inputTarget.files[0];
-    
-    if (file) {
-        const reader = new FileReader();
-        reader.addEventListener('load', function(e) {
-            const readerTarget = e.target;
-            const img = document.createElement('img');
-            img.src = readerTarget.result;
-            img.classList.add('picture__img');
-
-            pictureImage.innerHTML = '';
-
-            pictureImage.appendChild(img);
-
-        });
-
-        reader.readAsDataURL(file);
-    } else {
-        pictureImage.innerHTML = pictureImageTxt;
-    }
-    
-});
 
 
 const botaoExibirProduto = document.getElementById('botaoExibirProduto');
@@ -48,17 +21,12 @@ botaoExibirProduto.addEventListener('click', () => {
     pictureImage.appendChild(img1);
 
     const tituloAtualProduto = document.getElementById('produtoTitulo').innerHTML;
+    document.getElementById('tituloProduto').innerHTML = tituloAtualProduto
     const descricaoAtualProduto = document.getElementById('produtoDescricao').innerText;
+    document.getElementById('descricaoProduto').innerHTML = descricaoAtualProduto
     const precoAtualProduto = document.getElementById('produtoPreco').innerText;
-
-    const inputTituloProduto = document.getElementById('tituloProduto');
-    inputTituloProduto.value = tituloAtualProduto;
-
-    const inputDescricaoProduto = document.getElementById('descricaoProduto');
-    inputDescricaoProduto.value = descricaoAtualProduto;
-
-    const inputPrecoProduto = document.getElementById('precoProduto');
-    inputPrecoProduto.value = precoAtualProduto;
+    document.getElementById('precoProduto').innerHTML = precoAtualProduto
+   
 });
  
 botaoAdicionarProduto.addEventListener('click', () => {

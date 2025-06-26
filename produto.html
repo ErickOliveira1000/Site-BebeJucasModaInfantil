@@ -17,7 +17,7 @@
                 <a href="index.html"><img src="img/bbj2.jpeg" alt="logo2"></a>
             </div>
             <nav>
-                <ul>
+                <ul id="botoes-menu">
                     <li><a href="index.html" class="btn-menu" id="menu-inicio">Início</a></li>
                     <li><a href="produto.html" class="btn-menu" id="menu-produto">Produtos</a></li>
                     <li><a href="sobre.html" class="btn-menu" id="menu-sobre">Sobre</a></li>
@@ -49,16 +49,16 @@
         <div class="popupExibirProduto" id="popupExibirProduto">
             <div class="cardProdutoPopup">
                 <div id="produtoPopupImg">
-                    <label class="picture" for="picture__input" tabindex="0"> 
+                    <label class="picture" for="imgProduto" tabindex="0"> 
                         <span class="picture__image"></span>
                     </label>
                 
-                    <input type="file" accept="image/*" id="picture__input"/>
+                    <div id="imgProduto"></div>
                 </div>
                 <div class="produtoPopup">
-                    <input placeholder="Título do Produto" maxlength="45" id="tituloProduto">
-                    <textarea placeholder="Descrição do Produto" maxlength="70" id="descricaoProduto"></textarea>
-                    <input placeholder="Preço" id="precoProduto">
+                    <p id="tituloProduto"></p>
+                    <p id="descricaoProduto"></p>
+                    <p id="precoProduto"></p>
                 </div>
                 <div class="seletoresPopup">
                     <button id="botaoAdicionarProduto">ADICIONAR</button>
